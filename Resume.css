@@ -1,0 +1,223 @@
+/* base theme */
+body {
+    background-color: grey;
+    justify-content: center;
+    display: flex;
+}
+/* dark theme */
+/* .darktheme{
+    background-color: black;
+    color: yellow;
+    
+} */
+/* #toggleTheme {
+    position: fixed;
+    top: 1px;
+    right: 1px;
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: white;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "headerpic content"
+        "sidebar content"
+        "rodo   rodo";
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    background-color: #f0f0f0;
+    font-family: 'Montserrat', sans-serif;
+}
+.rodo {
+    grid-area: rodo;
+    background-color: #1e90ff;
+    text-align: center;
+    font-weight: 100;
+    color: #f0f0f0;
+    padding: 20px 0;
+    width: auto;
+}
+
+.rodo p {
+    margin: 0;
+    line-height: 1.5; 
+    white-space: pre-wrap; 
+}
+
+/* todo maybe*/
+/* .cv ul li:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -25px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 2px solid #0bb5f4;
+}
+
+.cv ul li:after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: -21px;
+    width: 3px;
+    height: 115px;
+    background: #0bb5f4;
+} */
+
+.icon {
+    width: 25px;
+    height: 25px;
+    background: #ffffff;
+    color: black;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    margin-top: 10px;
+}
+.icon-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.bold {
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #1e90ff;
+}
+
+.bold2 {
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #f0f0f0;
+}
+
+.headerpic {
+    grid-area: headerpic;
+    padding: 20px 40px 0;
+    background: #1e90ff;
+}
+
+.header {
+    grid-area: header;
+    padding-left: 40px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #1e90ff;
+    padding-left: 40px;
+    color: #f0f0f0;
+}
+
+.content {
+    grid-area: content;
+    padding-left: 40px;
+    padding-top: 40px;
+}
+
+.cvimage {
+    height: 200px;
+    width: 200px;
+}
+
+.cvinfo,
+.education,
+.hyperlinks,
+.laungages,
+.experience,
+.interestedin {
+    padding-left: 40px;
+    width: auto;
+    height: auto;
+}
+
+.interestedin {
+    text-align: center;
+}
+
+/* desktop 4k to laptop */
+@media only screen and (min-width:1024px) and  (max-width: 2560px) {
+    .container {
+        grid-template-areas:
+            "headerpic content"
+            "sidebar content"
+            "rodo  rodo";
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto;
+    }
+    .headerpic{
+        text-align: center;
+    }
+    .content{
+        padding-bottom: 20px;
+    }
+    .sidebar, .content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .rodo{
+        width: 800px;
+    }
+}
+
+/* tablet  */
+@media only screen  and (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            "headerpic"
+            "content"
+            "sidebar"
+            "rodo";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+    .headerpic{
+        text-align: center;
+    }
+    .content{
+        padding-bottom: 20px;
+    }
+    .sidebar, .content, .rodo {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+/* mobile */
+ @media only screen and (max-width: 480px) {
+    .bold, .bold2 {
+        font-size: 24px;
+    }
+    .icon {
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+    }
+    #toggleTheme {
+        padding: 5px 10px;
+    }
+    .headerpic{
+        text-align: center;
+    }
+    .content{
+        padding-bottom: 20px;
+    }
+      .content, .rodo {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
