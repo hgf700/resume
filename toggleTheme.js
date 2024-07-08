@@ -1,3 +1,3 @@
-// document.getElementById('toggleTheme').addEventListener('click', function () {
-//     document.querySelector('.content').classList.toggle('darktheme');
-// });
+document.getElementById('toggleTheme').addEventListener('click', function () {
+    document.querySelector('.content').classList.toggle('darktheme');
+});

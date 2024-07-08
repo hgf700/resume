@@ -5,12 +5,12 @@ body {
     display: flex;
 }
 /* dark theme */
-/* .darktheme{
+    .darktheme{
     background-color: black;
     color: yellow;
     
-} */
-/* #toggleTheme {
+} 
+    #toggleTheme {
     position: fixed;
     top: 1px;
     right: 1px;
@@ -21,7 +21,7 @@ body {
     border-width: 1px;
     border-radius: 5px;
     cursor: pointer;
-} */
+} 
 
 .container {
     display: grid;
